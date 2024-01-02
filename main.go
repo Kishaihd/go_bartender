@@ -1,11 +1,11 @@
 package main
 
-import {
-	"fmt"
-	"bartender/model"
-}
-
 func main() {
-	oldFashioned := Recipe.New("Old Fashioned")
-	oldFashioned.describe()
+	oldFashioned := NewRecipe("Old Fashioned")
+	// oldFashioned := NewRecipe("Old Fashioned")
+	oldFashioned.AddIngredient("bourbon", 1.5, "oz")
+	oldFashioned.AddIngredient("angostura bitters", 3, "dashes")
+	oldFashioned.AddIngredient("simple syrup", 0.5, "oz")
+	oldFashioned.AddIngredient("orange peel", 1, "strip")
+	oldFashioned.Describe()
 }
